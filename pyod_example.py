@@ -13,10 +13,9 @@ def knn_example(
     contamination: float = 0.1  # 外れ値の割合（％）
 ):
     X_train, X_test, y_train, y_test = generate_data(
-        n_train=n_train,
-        n_test=n_test,
+        n_train=n_train, n_test=n_test,
         contamination=contamination,
-        behaviour='new'
+        random_state=57, behaviour='new'
     )
 
     clf_name = 'KNN'
